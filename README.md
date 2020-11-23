@@ -1,6 +1,6 @@
 # Face embedding trainer
 
-This repository contains the framework for training deep embeddings for face recognition. The trainer is intended for the face recognition exercise of the [Machine Learning for Visual Understanding](https://github.com/joonson/mlvu2020) course, but the flexible trainer can be used for any meta-learning task. This is an adaptation of the [speaker recognition model trainer](https://github.com/clovaai/voxceleb_trainer) described in [In defence of metric learning for speaker recognition](https://arxiv.org/abs/2003.11982).
+This repository contains the framework for training deep embeddings for face recognition. The trainer is intended for the face recognition exercise of the [Machine Learning for Visual Understanding](https://github.com/joonson/mlvu2020) course, but the flexible code can be used for any meta-learning task. This is an adaptation of the [speaker recognition model trainer](https://github.com/clovaai/voxceleb_trainer) described in [_In defence of metric learning for speaker recognition_](https://arxiv.org/abs/2003.11982).
 
 ### Dependencies
 ```
@@ -51,11 +51,13 @@ You can add new models and loss functions to `models` and `loss` directories res
 
 The test list should contain labels and image pairs, one line per pair, as follows. `1` is a target and `0` is an imposter.
 ```
-1 id10001/00001.jpg id10001/00002.jpg
-0 id10001/00003.jpg id10002/00001.jpg
+1,id10001/00001.jpg,id10001/00002.jpg
+0,id10001/00003.jpg,id10002/00001.jpg
 ```
 
 The folders in the training set should contain images for each identity (i.e. `identity/image.jpg`).
+
+The input transformations can be changed in the code.
 
 ### Citation
 
